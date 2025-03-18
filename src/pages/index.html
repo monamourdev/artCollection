@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivo de Memória</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+    <script>
+
+        document.addEventListener("scroll", function () {
+            document.querySelectorAll(".galeria-item").forEach((item) => {
+                const rect = item.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                if (rect.top < windowHeight * 0.5 && rect.bottom > 0) {
+                    item.classList.add("reveal");
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="AMIA Logo" class="logo-img">
+                <p class="logo-text">Arquivo da Memória Intercultural <br> das Artes da Cena no Brasil</p>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#acervo">Acervo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#parceiros">Parceiros</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="waves-container">
+            <img src="../assets/ondas.png" alt="Ondas decorativas" class="waves-img">
+            <h1 class="waves-text">Arquivo da Memória Intercultural das Artes da Cena no Brasil</h1>
+        </div>
+    </section>
+
+    <section class="memoria-viva">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/memoria-viva1.jpg" class="d-block w-100"
+                        style="object-fit: cover; object-position: top;" alt="Memória Viva 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hugh Kinsella Cunningham</h5>
+                        <p>Memória Viva: Guerra e Paz no Congo</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/memoria-viva2.jpg" class="d-block w-100"
+                        style="object-fit: cover; object-position: top;" alt="Memória Viva 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>A Biomecânica Teatral sobrevive com Gennadi Bogdanov</h5>
+                        <p>Leia entrevista exclusiva com o russo que ministra oficina em Porto Alegre</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/memoria-viva3.jpg" class="d-block w-100"
+                        style="object-fit: cover; object-position: 50% 50%;" alt="Memória Viva 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Palakkad plays host to an all-woman Kathakali show</h5>
+                        <p>It is the first time an all-woman troupe staged a performance in front of a large audience
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/memoria-viva4.jpg" class="d-block w-100"
+                        style="object-fit: cover; object-position: 50% 50%;" alt="Memória Viva 4">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Performance Corpos de LuS explora a multilinguagem no Espaço Cultural Renato Russo</h5>
+                        <p>Artista Luli Luthi realiza a performance Corpos de LuS no Teatro Galpão Hugo Rodas na sexta,
+                            sábado e domingo (21, 22 e 23/6)</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/memoria-viva5.jpg" class="d-block w-100" style="object-fit: contain;"
+                        alt="Memória Viva 5">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>UFC, SECULT/CE e Academia Cearense de Teatro discutem preservação de acervos de artes
+                            cênicas</h5>
+                        <p>Os gestores conversaram sobre políticas de memória e de preservação de acervos de cultura
+                            artística</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-nos" style="background-color: #1b2a44; padding: 80px 0;">
+        <div class="container text-center">
+            <h2 class="titulo-secao" style="color: #c89f74; margin-bottom: 40px;">SOBRE NÓS</h2>
+            <p class="descricao-secao" style="margin-bottom: 60px; color: white;">
+                O Arquivo da Memória Intercultural das Artes da Cena no Brasil é um projeto multimídia que abriga e
+                fomenta diferentes acervos
+                relacionados à memória intercultural das artes da cena vista do Brasil. Trata-se de um repositório de
+                registros de percursos,
+                os caminhos e os entrelaçamentos que nos informam sobre a vida e a memória das artes cênicas nos mais
+                diferentes contextos geográficos e culturais.
+                Seu objetivo principal é potencializar pesquisas artísticas, acadêmicas e processos de criação que se
+                constroem no encontro e contraste
+                inerentes à diversidade cultural.
+            </p>
+        </div>
+    </section>
+
+    <section class="pesquisadores" style="background-color: #1b2a44; padding: 60px 0;">
+        <div class="container text-center">
+            <h3 class="titulo-pesquisadores" style="color: #c89f74; margin-bottom: 40px;">PESQUISADORES</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-sm-6">
+                    <div class="pesquisador-container">
+                        <div class="pesquisador-img">
+                            <img src="../assets/ricardogomes.jpg" class="img-fluid" alt="Ricardo Gomes">
+                        </div>
+                        <p class="pesquisador-nome" style="color: white"><strong>Ricardo</strong> <span
+                                style="color: #7697af;">Gomes</span></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="pesquisador-container">
+                        <div class="pesquisador-img">
+                            <img src="../assets/raquelcastro.jpg" class="img-fluid" alt="Raquel Castro">
+                        </div>
+                        <p class="pesquisador-nome" style="color: white"><strong>Raquel</strong> <span
+                                style="color: #7697af;">Castro</span></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="pesquisador-container">
+                        <div class="pesquisador-img">
+                            <img src="../assets/edenperetta.jpg" class="img-fluid" alt="Eden Peretta">
+                        </div>
+                        <p class="pesquisador-nome" style="color: white"><strong>Eden</strong> <span
+                                style="color: #7697af;">Peretta</span></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="pesquisador-container">
+                        <div class="pesquisador-img">
+                            <img src="../assets/paulomaciel2.jpg" class="img-fluid" alt="Paulo Maciel">
+                        </div>
+                        <p class="pesquisador-nome" style="color: white"><strong>Paulo</strong> <span
+                                style="color: #7697af;">Maciel</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="container text-center">
+            <h2 class="titulo-galeria">GALERIA</h2>
+            <div class="galeria-item galeria-item-direita">
+                <div class="galeria-bg"></div>
+                <img src="../assets/memoria-viva1.jpg" alt="Dança Indiana" class="galeria-img">
+                <div class="galeria-legenda">
+                    <h3>DANÇA INDIANA</h3>
+                    <p>Um movimento do corpo estilizado</p>
+                </div>
+            </div>
+            <div class="galeria-item galeria-item-esquerda">
+                <div class="galeria-bg"></div>
+                <img src="../assets/memoria-viva1.jpg" alt="O Teatro Russo" class="galeria-img">
+                <div class="galeria-legenda">
+                    <h3>O TEATRO RUSSO</h3>
+                    <p>Expressões cênicas impactantes</p>
+                </div>
+            </div>
+            <div class="galeria-item galeria-item-direita">
+                <div class="galeria-bg"></div>
+                <img src="../assets/memoria-viva1.jpg" alt="Dança Butô" class="galeria-img">
+                <div class="galeria-legenda">
+                    <h3>DANÇA BUTÔ</h3>
+                    <p>Arte da Presença</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
